@@ -1,0 +1,14 @@
+baseURL = 'http://onehealthy.gitee.io/readingnotes/'
+languageCode = 'zh-cn'
+title = '大健康 - 读书笔记'
+theme = "hyde"
+paginate =  99
+uglyurls = true
+
+[params]
+    layoutReverse = true
+    description = "健康，在路上。"
+    copyright = "Copyright (c) 2023, Higkoo"
+
+[permalinks]
+  posts = ":slug"
