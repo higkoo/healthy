@@ -6,7 +6,7 @@ draft: false
 # 读书笔记
 
 #### 介绍
-记录学习过程的读书笔记
+活到老，学到老。
 
 #### 附加信息
  - 网站： [onehealthy.gitee.io/readingnotes](http://onehealthy.gitee.io/readingnotes)

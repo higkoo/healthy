@@ -1,10 +1,9 @@
-baseURL = 'https://higkoo.github.io/healthy/'
+baseURL = 'http://onehealthy.gitee.io/readingnotes/'
 languageCode = 'zh-cn'
 title = '大健康 - 读书笔记'
 theme = "hyde"
 paginate =  99
 uglyurls = true
-publishDir = 'docs'
 
 [params]
     layoutReverse = true
