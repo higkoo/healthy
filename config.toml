@@ -1,5 +1,5 @@
 baseURL = 'https://higkoo.github.io/healthy/'
-languageCode = 'zh-cn'
+locale = 'zh-cn'
 title = '大健康 - 读书笔记'
 theme = "hyde"
 paginate =  99

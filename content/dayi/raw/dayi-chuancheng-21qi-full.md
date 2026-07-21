@@ -1,3 +1,9 @@
+---
+title: "dayi-chuancheng-21qi-full"
+date: 2026-07-21T00:00:00+08:00
+draft: false
+---
+
 **大医传承黄埔医校21期 开班前言**
 
 > 主讲：贾校长

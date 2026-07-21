@@ -1,3 +1,9 @@
+---
+title: "A8-fu-jiao-gan-shen-jing-gong-neng-kang-jin"
+date: 2026-07-21T00:00:00+08:00
+draft: false
+---
+
 ##  [副交感神经功能亢进](https://www.wiki8.cn/fujiaoganshenjinggongnengkangjin_20725/)
 
 ## 概述
