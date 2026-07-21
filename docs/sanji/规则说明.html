@@ -1,0 +1,135 @@
+<html  xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.164.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; 大健康 - 读书笔记</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://higkoo.github.io/healthy/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://higkoo.github.io/healthy/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://higkoo.github.io/healthy/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://higkoo.github.io/healthy/css/hyde.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" layout-reverse">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://higkoo.github.io/healthy/"><h1>大健康 - 读书笔记</h1></a>
+      <p class="lead">
+       健康，在路上。 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://higkoo.github.io/healthy/">首页</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>Copyright (c) 2023, Higkoo</p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <h1 id="wiki-规则说明schema">Wiki 规则说明（SCHEMA）</h1>
+<blockquote>
+<p><strong>类型</strong>: schema（Wiki 规则配置）
+<strong>创建时间</strong>: 2026-07-21
+<strong>最后更新</strong>: 2026-07-21
+<strong>适用范围</strong>: reji-wiki 整个知识库</p>
+</blockquote>
+<h2 id="一建库目的">一、建库目的</h2>
+<p>本 Wiki 以 <code>原始资料/</code> 目录下的全部 Markdown 文件（由倪海厦先生完整教学与临床资料 PDF/DOC 全文提取）为原始资料，按 LLM Wiki（Andrej Karpathy 模式）&ldquo;编译&quot;为结构化、可增量更新的中文 Markdown 知识库。目标是把零散的 PDF / DOC / DOCX 资料沉淀为可检索、可关联、可长期保鲜的个人知识库。</p>
+<h2 id="二目录结构">二、目录结构</h2>
+<pre tabindex="0"><code>reji-wiki/
+├── index.md          ← 内容索引（保留英文文件名，便于工具识别）
+├── 变更日志.md        ← 变更时间线
+├── 规则说明.md        ← 本文件（对应原 SCHEMA.md）
+├── 原始资料/          ← 第一层：原始资料清单（不存放副本，仅建引用清单）
+│   └── 资料清单.md
+├── 实体/             ← 第二层：人物、机构、作品等实体页
+├── 概念/             ← 第二层：理论、技法、方法论等概念页
+└── 主题/             ← 第二层：综述、对比、汇编等主题页
+</code></pre><blockquote>
+<p>说明：原始 PDF/DOC 体积大（总计约 1.5GB），已全部转换为 Markdown 格式存放于 <code>原始资料/</code> 目录（81 个文件）。Wiki 页面通过相对路径链接引用这些 raw Markdown 文件，如 <code>链接文字</code> 指向 <code>../原始资料/文件名.md</code>（子目录页面）或 <code>原始资料/文件名.md</code>（根目录页面）。原始 PDF/DOC 位于 <code>../../docs/NiHaixia/</code>（只读，不修改）。</p>
+</blockquote>
+<h2 id="三命名规范">三、命名规范</h2>
+<ul>
+<li><strong>保留英文的文件/目录</strong>：仅 <code>index.md</code> 一个文件名保留英文（按用户要求）；其余文件与目录一律使用<strong>中文</strong>命名（如 <code>实体/倪海厦.md</code>、<code>概念/伤寒论.md</code>）。</li>
+<li><strong>页面命名</strong>：使用简短中文主题词，必要时以&quot;概念/经方.md&quot;形式避免重名。</li>
+<li><strong>链接格式</strong>：一律使用<strong>纯 Markdown</strong> 相对路径链接（不使用 <code>&lt;&gt;</code> 包裹、不使用 <code>[[wikilink]]</code>）。例如 <code>[倪海厦](实体/倪海厦.md)</code>、<code>[人纪](概念/人纪.md)</code>。
+<ul>
+<li><strong>内部 Wiki 链接</strong>：路径含中文可直接书写（可读性好），如 <code>[针灸](概念/针灸.md)</code>。</li>
+<li><strong>回链原始资料</strong>：根目录页面用 <code>原始资料/&lt;文件名&gt;</code>，子目录页面用 <code>原始资料/&lt;文件名&gt;</code>；因原始文件名含中文与括号，按 URL 规范做百分号编码（Markdown 渲染时会正确解析），如 <code>[专题-乳癌篇-倪海厦.md](原始资料/专题-乳癌篇-倪海厦.md)</code>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="四页面模板">四、页面模板</h2>
+<p>每个 Wiki 页面遵循以下结构：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># {页面标题}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**类型**: 实体 | 概念 | 主题 | 对比
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**创建时间**: YYYY-MM-DD
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**最后更新**: YYYY-MM-DD
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">**来源**: [资料清单](原始资料/资料清单.md) 或具体原文链接
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 摘要
+</span></span></span><span style="display:flex;"><span>{一段话概括核心内容}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 详情
+</span></span></span><span style="display:flex;"><span>{详细内容，可含多个子标题}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 关联
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 相关实体: [<span style="color:#f92672">倪海厦</span>](<span style="color:#a6e22e">实体/倪海厦.md</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 相关概念: [<span style="color:#f92672">经方</span>](<span style="color:#a6e22e">概念/经方.md</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 参见: [<span style="color:#f92672">人纪系列总览</span>](<span style="color:#a6e22e">主题/人纪系列总览.md</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 引用来源
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [1] [<span style="color:#f92672">专题-乳癌篇-倪海厦.md</span>](<span style="color:#a6e22e">原始资料/专题-乳癌篇-倪海厦.md</span>) — 引用说明
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 变更记录
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> YYYY-MM-DD: 初始创建
+</span></span></code></pre></div><h2 id="五知识质量标准">五、知识质量标准</h2>
+<ul>
+<li><strong>不臆造</strong>：所有内容须来源于 <code>原始资料/</code> 中的 raw Markdown 文件，或标注为&quot;AI 综合推理&rdquo;。</li>
+<li><strong>必标注来源</strong>：每个知识点都给出原文链接。</li>
+<li><strong>标注矛盾</strong>：不同资料对同一问题说法不一致时，用 <code>&gt; ⚠️ 矛盾标注</code> 引用块显式标记。</li>
+<li><strong>增量更新</strong>：更新已有页面时保留历史、追加新内容，并在变更记录中注明。</li>
+</ul>
+<h2 id="六操作纪律">六、操作纪律</h2>
+<ul>
+<li>原始资料目录<strong>只读</strong>，绝不修改 <code>../../docs/NiHaixia/</code> 下的任何原始 PDF/DOC 文件。</li>
+<li>每次 ingest 后必须更新 <a href="index.html">index.md</a>
+ 与 <a href="%e5%8f%98%e6%9b%b4%e6%97%a5%e5%bf%97.html">变更日志</a>
+。</li>
+<li>所有页面均登记进索引，避免孤立页。</li>
+</ul>
+<h2 id="七重要提示">七、重要提示</h2>
+<p>本库内容均出自倪海厦先生公开教学资料与民间校勘本，<strong>仅供中医学习与研究参考，不构成医疗建议</strong>。如有身体不适，请务必前往正规医疗机构就诊。原始资料中多处声明&quot;仅供网络测试、请购买原版&quot;，使用本 Wiki 亦请遵守该原则。</p>
+
+</div>
+    </main>
+
+    
+      
+    
+  </body>
+</html>
