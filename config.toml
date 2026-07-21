@@ -13,3 +13,8 @@ publishDir = 'docs'
 
 [permalinks]
   posts = ":slug"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
