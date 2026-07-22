@@ -1,0 +1,30 @@
+<nav>
+{{ partial "docs/brand" . }}
+{{ partial "docs/search" . }}
+
+{{ $items := slice
+  (dict "path" "/sanji" "name" "三纪·倪海厦资料库")
+  (dict "path" "/dayi"  "name" "本能论·大医传承")
+  (dict "path" "/bnl"   "name" "本能论读书笔记")
+  (dict "path" "/jz"    "name" "开源减脂方案")
+}}
+
+{{ $currentPage := . }}
+<ul>
+{{ range $items }}
+  {{ $page := site.GetPage .path }}
+  <li>
+    {{ if and $page $page.Content }}
+    <a href="{{ $page.RelPermalink }}" class="{{ if or (eq $currentPage $page) ($currentPage.IsDescendant $page) }}active{{ end }}">
+      {{ .name }}
+    </a>
+    {{ else }}
+    <span>{{ .name }}</span>
+    {{ end }}
+  </li>
+{{ end }}
+</ul>
+
+{{ partial "docs/menu-hugo" (dict "Page" . "Menu" .Site.Menus.after) }}
+{{ partial "docs/inject/menu-after" . }}
+</nav>

@@ -1,0 +1,83 @@
+<style>
+/* 首页卡片样式 */
+.home-intro {
+  margin-bottom: 2rem;
+}
+.home-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.home-intro .subtitle {
+  color: var(--gray-500);
+  font-size: 1.1rem;
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.topic {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  background: var(--gray-100);
+}
+.topic:hover {
+  border-color: var(--color-link);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.topic h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  color: var(--color-link);
+}
+.topic p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gray-500);
+}
+
+.home-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.home-links li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.home-links li a {
+  font-weight: 500;
+}
+
+/* 知识库 wiki 索引表格 */
+.wiki-index table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.wiki-index th, .wiki-index td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-300);
+}
+.wiki-index th {
+  background: var(--gray-100);
+  font-weight: 600;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 600px) {
+  .topics {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
