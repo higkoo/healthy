@@ -1,6 +1,12 @@
 {{ define "main" -}}
+{{ with .Content -}}
+<div class="page">
+  {{ . }}
+</div>
+{{- end }}
+{{ if .Pages -}}
 <ul class="posts">
-{{ range .Data.Pages -}}
+{{ range .Pages -}}
   <li>
     <span>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -11,4 +17,5 @@
   </li>
 {{- end }}
 </ul>
+{{- end }}
 {{- end }}
