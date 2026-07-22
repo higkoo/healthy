@@ -1,6 +1,7 @@
 # Hugo build output (auto-deployed by GitHub Actions, no need to commit)
 public/
 /docs/
+resources/
 
 # Hugo lock file
 .hugo_build.lock
