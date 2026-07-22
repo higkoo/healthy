@@ -4,7 +4,7 @@ title = '大健康 - 读书笔记'
 theme = "hyde"
 paginate =  99
 uglyurls = true
-publishDir = 'docs'
+publishDir = 'public'
 
 [params]
     layoutReverse = true
